@@ -67,9 +67,9 @@ main > section {
     align-items: center;
 }
 
-main > section > article {
+/* main > section > article {
     margin-right: 10%;
-}
+} */
 
 main > section > article > p {
     margin-bottom: 20px;
