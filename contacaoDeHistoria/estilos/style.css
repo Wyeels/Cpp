@@ -63,13 +63,10 @@ main {
 main > section {
     height: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
+    margin-left: 10%;
 }
-
-/* main > section > article {
-    margin-right: 10%;
-} */
 
 main > section > article > p {
     margin-bottom: 20px;
