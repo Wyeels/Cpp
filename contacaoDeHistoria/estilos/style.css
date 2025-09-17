@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+} 
+
 :root {
     --cor1: #B98850;
     --cor2: #5A3C1F;
@@ -20,6 +24,8 @@ body, html {
     font-family: var(--font-princ);
     scroll-behavior: smooth;
 }
+
+/* Config Header */
 
 header {
     width: 100dvw;
@@ -39,6 +45,8 @@ header > section > article {
     padding: 6px;
     
 }
+
+/* Config Main */
 
 main {
     width: 100dvw;
@@ -132,6 +140,8 @@ input[type = 'range']::-webkit-slider-thumb {
     cursor: pointer;
     
 }
+
+/* Config Footer */
 
 footer {
     font-size: .8em;
