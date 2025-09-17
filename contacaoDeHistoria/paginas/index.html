@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="../estilos/style.css" media="screen">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <section>
+        <!-- <section>
             <article>
                 <h1>Pós Médio</h1>
-                <h2>Contação de Histórias</h2>  
+                <h1>Contação de Histórias</h1>  
             </article>
-        </section>
+        </section> -->
     </header>
     <main>
         <section>
             <article>
+            <p><a href="convidado.html">Votar como Convidado</a></p>
             <form action="teste.cpp" method="post">
-                <div>
-                <label for="inome">Nome</label>
-                <input type="text" name="nome" id="inome"  required>
-                </div>
-
                 <div>
                     <label for="#">Turma</label>
 
@@ -34,19 +30,24 @@
                 </div>
 
                 <div>
-                    <label for="inota">Nota</label>
-                    <input type="range" name="nota" id="inota" max="10"  required>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome"  required>
                 </div>
 
                 <div>
-                    <input type="submit" value="Enviar">
+                    <label for="inota">Nota</label>
+                    <input type="range" name="nota" id="inota" max="10" required>
+                </div>
+
+                <div>
+                    <input type="submit" value="Avaliar">
                 </div>
             </form>
             </article>
         </section>
     </main>
     <footer>
-
+        <p>Criado por <a href="github.com/wyeels">Wesley Xavier</a></p>
     </footer>
 </body>
 </html>
