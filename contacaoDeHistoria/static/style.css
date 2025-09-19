@@ -32,7 +32,7 @@ header {
     height: 360px;
     margin-bottom: 15px;
     background-color: var(--cor1);
-    background: var(--cor2) url("../imagem-fundo.png") center center scroll no-repeat;
+    background: var(--cor2) url("imagem-fundo.png") center center scroll no-repeat;
     background-size: cover;
     color: rgba(255, 255, 255, 0.88);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -51,7 +51,7 @@ header > section > article {
 main {
     width: 100dvw;
     height: 55dvh;
-    background: var(--cor2) url("../imagem-fundo2.jpg") center center scroll no-repeat;
+    background: var(--cor2) url("imagem-fundo2.jpg") center center scroll no-repeat;
     background-size: cover;
     color: var(--cor3);
     font-weight: 650;
@@ -80,6 +80,13 @@ main > section > article > p > a {
 main > section > article > p > a:hover {
     color: var(--cor2);
     transition: all .4s ease;
+}
+
+main > section > article > form > div.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 main > section > article > form > div > input {
