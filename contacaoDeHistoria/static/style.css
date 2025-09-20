@@ -33,7 +33,7 @@ header {
     height: 360px;
     margin-bottom: 15px;
     background-color: var(--cor1);
-    background: var(--cor2) url("imagem-fundo.png") center center scroll no-repeat;
+    background: var(--cor2) url("imagem-fundo.jpg") center center scroll no-repeat;
     background-size: cover;
     color: rgba(255, 255, 255, 0.88);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
