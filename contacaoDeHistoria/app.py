@@ -66,6 +66,9 @@ def nota_visitante():
     flash('Sua nota foi registrada com sucesso!')
     return redirect(url_for('convidado'))
     
+@app.route('/redgit')
+def redirecionar_git():
+    return redirect('https://github.com/wyeels')
 
 if __name__ == '__main__':
     criar_tabela()
