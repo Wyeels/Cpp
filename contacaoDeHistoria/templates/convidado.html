@@ -14,11 +14,20 @@
     <main>
         <section>
             <article>
-                <p><a href="index.html">Votar como Aluno</a></p>
-                <form action="/cadastro" method="post">
+                <p><a href="/">Votar como Aluno</a></p>
+
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div>{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                <form action="/notavisitante" method="post">
                 <div>
                     <label for="inota">Nota</label>
-                    <input type="range" name="nota" id="inota" max="10" required>
+                    <input type="range" name="notavis" id="inotavis" max="10" required>
                 </div>
 
                 <div>

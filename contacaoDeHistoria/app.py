@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3
-import re
 
 app = Flask(__name__)
 app.secret_key = 'Wes123ley'
@@ -19,6 +18,11 @@ def criar_tabela():
             nota INTEGER
         )
     ''')
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS notasvisitante (
+            notavis INTEGER
+        )
+    ''')
     conectar.commit()
     conectar.close()
 
@@ -27,7 +31,7 @@ def criar_tabela():
 def index():
     return render_template('index.html')
 
-@app.route('/cadastro', methods=['POST'])
+@app.route('/notaalu', methods=['POST'])
 def adicionar_nota():
     if request.method == 'POST':
         turma = request.form['turma']
@@ -41,10 +45,27 @@ def adicionar_nota():
     )
     conectar.commit()
     conectar.close()
+    flash('Sua nota foi registrada com sucesso!')
     return redirect(url_for('index'))
 
-# @app.route('/teste')
+@app.route('/visitante')
+def convidado():
+    return render_template('convidado.html')
 
+@app.route('/notavisitante', methods=['POST'])
+def nota_visitante():
+    if request.method == 'POST':
+        notavis = request.form['notavis']
+    conectar = conectar_db()
+    cursor = conectar.cursor()
+    cursor.execute(
+        'INSERT INTO notasvisitante (notavis) VALUES (?)', (notavis)
+    )
+    conectar.commit()
+    conectar.close()
+    flash('Sua nota foi registrada com sucesso!')
+    return redirect(url_for('convidado'))
+    
 
 if __name__ == '__main__':
     criar_tabela()
