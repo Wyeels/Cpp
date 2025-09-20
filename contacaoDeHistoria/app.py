@@ -59,7 +59,7 @@ def nota_visitante():
     conectar = conectar_db()
     cursor = conectar.cursor()
     cursor.execute(
-        'INSERT INTO notasvisitante (notavis) VALUES (?)', (notavis)
+        'INSERT INTO notasvisitante (notavis) VALUES (?)', (notavis,)
     )
     conectar.commit()
     conectar.close()
