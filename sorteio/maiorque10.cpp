@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int maiorque() {
+int main() {
     int valor;
     cin >> valor;
 
@@ -11,4 +11,5 @@ int maiorque() {
     } else {
         cout << "Nao e maior que 10" << endl;
     }
+    return 0;
 }
